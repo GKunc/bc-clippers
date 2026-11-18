@@ -33,13 +33,55 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "HairSalon",
         "@id": "{{SITE_URL}}/#organization",
         "name": "{{BRAND}}",
+        "alternateName": "BC.CLIPPERS Barbershop",
         "url": "{{SITE_URL}}/",
         "logo": "{{SITE_URL}}/icon-512.png",
+        "image": "{{SITE_URL}}/og.png",
         "description": "{{META_DESCRIPTION}}",
-        "sameAs": []
+        "priceRange": "35–180 zł",
+        "currenciesAccepted": "PLN",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Rakowicka 22D",
+          "postalCode": "31-521",
+          "addressLocality": "Kraków",
+          "addressRegion": "małopolskie",
+          "addressCountry": "PL"
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Rakowicka+22D%2C+31-521+Krak%C3%B3w",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "21:00" }
+        ],
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": "{{BOOKING_URL}}"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Cennik",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strzyżenie męskie" }, "price": "110", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strzyżenie maszynką" }, "price": "90", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "COMBO BASIC: strzyżenie i trymowanie brody" }, "price": "150", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "COMBO CLIPPERS: strzyżenie i broda z gorącym ręcznikiem" }, "price": "180", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tonowanie głowy" }, "price": "90", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Strzyżenie brody" }, "price": "80", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Broda i podgolenie z gorącym ręcznikiem" }, "price": "110", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tonowanie brody" }, "price": "70", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tonowanie i trymowanie brody" }, "price": "140", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Golenie twarzy lub głowy brzytwą" }, "price": "120", "priceCurrency": "PLN" },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Depilacja woskiem nos/uszy" }, "price": "35", "priceCurrency": "PLN" }
+          ]
+        },
+        "sameAs": [
+          "https://www.instagram.com/BC.Clippers/",
+          "https://www.facebook.com/profile.php?id=61588855171556",
+          "{{BOOKING_URL}}"
+        ]
       },
       {
         "@type": "WebSite",
@@ -59,8 +101,33 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Question one?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Answer one." }
+        "name": "Ile kosztuje strzyżenie męskie w BC Clippers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Strzyżenie męskie kosztuje 110 zł (ok. 1 godziny), a strzyżenie samą maszynką 90 zł (ok. 30 minut). W obu przypadkach mycie i stylizacja włosów są w cenie." }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak umówić się na wizytę?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Wizyty rezerwujesz online w Booksy: wybierasz usługę, barbera (Yevhen, Tatiana lub Piotrek) i wolny termin." }
+      },
+      {
+        "@type": "Question",
+        "name": "W jakich godzinach jest otwarte?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Od poniedziałku do piątku w godzinach 10:00–21:00, w soboty 9:00–21:00. W niedziele barber shop jest zamknięty." }
+      },
+      {
+        "@type": "Question",
+        "name": "Gdzie dokładnie jest BC Clippers?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Przy ul. Rakowickiej 22D, 31-521 Kraków, w dzielnicy Śródmieście." }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy można ukryć siwe włosy na głowie lub w brodzie?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Tak. Tonowanie głowy kosztuje 90 zł, tonowanie brody farbą American Crew 70 zł, a tonowanie z trymowaniem brody 140 zł. Efekt ma wyglądać naturalnie." }
+      },
+      {
+        "@type": "Question",
+        "name": "Co obejmuje COMBO CLIPPERS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To strzyżenie włosów, broda oraz golenie z gorącym ręcznikiem, razem z myciem i stylizacją włosów. Trwa ok. 1,5 godziny i kosztuje 180 zł." }
       }
     ]
   }
@@ -71,59 +138,133 @@
 
   <main id="main">
     <section class="hero">
+      <p class="eyebrow">Barber shop · Kraków Śródmieście</p>
       <h1>{{H1_HEADLINE}}</h1>
       <p class="lead">{{SUBHEADLINE}}</p>
-      <a class="btn" href="#contact">{{CTA_LABEL}}</a>
+      <div class="hero-actions">
+        <a class="btn" href="{{BOOKING_URL}}" rel="noopener">{{CTA_LABEL}} w Booksy</a>
+        <a class="btn btn-ghost" href="#cennik">Zobacz cennik</a>
+      </div>
+      <ul class="facts" aria-label="Najważniejsze informacje">
+        <li><strong>5.0</strong> ocena w Booksy (244 opinie)</li>
+        <li><strong>Rakowicka 22D</strong> 31-521 Kraków</li>
+        <li><strong>Pon–sob do 21:00</strong> sobota od 9:00</li>
+      </ul>
     </section>
 
-    <section id="benefits" class="section">
-      <h2>Why {{BRAND}}</h2>
+    <section id="cennik" class="section">
+      <h2>Usługi i cennik</h2>
+      <p class="section-lead">Ceny i czas trwania jak w Booksy. Przy każdym strzyżeniu mycie i stylizacja włosów są w cenie.</p>
+      <div class="price-groups">
+        <div class="price-group">
+          <h3>Włosy</h3>
+          <dl class="prices">
+            <div><dt>Strzyżenie męskie <span>klasyczne lub nowoczesne cięcie, 1 h</span></dt><dd>110 zł</dd></div>
+            <div><dt>Strzyżenie maszynką <span>z doborem nakładek, 30 min</span></dt><dd>90 zł</dd></div>
+            <div><dt>Tonowanie głowy <span>odświeżenie koloru, maskowanie siwizny, 30 min</span></dt><dd>90 zł</dd></div>
+          </dl>
+        </div>
+        <div class="price-group">
+          <h3>Combo</h3>
+          <dl class="prices">
+            <div><dt>COMBO BASIC <span>strzyżenie + trymowanie brody, 1 h 15 min</span></dt><dd>150 zł</dd></div>
+            <div><dt>COMBO CLIPPERS <span>strzyżenie + broda + golenie z gorącym ręcznikiem, 1 h 30 min</span></dt><dd>180 zł</dd></div>
+          </dl>
+        </div>
+        <div class="price-group">
+          <h3>Broda i golenie</h3>
+          <dl class="prices">
+            <div><dt>Strzyżenie brody <span>kształt dopasowany do rysów twarzy, 30 min</span></dt><dd>80 zł</dd></div>
+            <div><dt>Broda + podgolenie <span>brzytwa i gorący ręcznik, 45 min</span></dt><dd>110 zł</dd></div>
+            <div><dt>Golenie twarzy lub głowy brzytwą <span>z gorącym ręcznikiem, 40 min</span></dt><dd>120 zł</dd></div>
+            <div><dt>Tonowanie brody <span>farba American Crew, 30 min</span></dt><dd>70 zł</dd></div>
+            <div><dt>Tonowanie + trymowanie brody <span>50 min</span></dt><dd>140 zł</dd></div>
+          </dl>
+        </div>
+        <div class="price-group">
+          <h3>Dodatki</h3>
+          <dl class="prices">
+            <div><dt>Depilacja woskiem <span>nos lub uszy, 10 min</span></dt><dd>35 zł</dd></div>
+          </dl>
+          <p class="note">W Booksy kupisz też pakiety usług, z których korzystasz regularnie.</p>
+        </div>
+      </div>
+      <p class="center"><a class="btn" href="{{BOOKING_URL}}" rel="noopener">Wybierz usługę i termin</a></p>
+    </section>
+
+    <section id="dlaczego" class="section">
+      <h2>Co dostajesz w BC Clippers</h2>
       <div class="grid">
-        <article class="card"><h3>Benefit one</h3><p>Describe the outcome, not the feature.</p></article>
-        <article class="card"><h3>Benefit two</h3><p>Describe the outcome, not the feature.</p></article>
-        <article class="card"><h3>Benefit three</h3><p>Describe the outcome, not the feature.</p></article>
+        <article class="card"><h3>Mycie i stylizacja w cenie</h3><p>Każde strzyżenie kończy się myciem i ułożeniem włosów. Wychodzisz gotowy, bez dopłat.</p></article>
+        <article class="card"><h3>Brzytwa i gorący ręcznik</h3><p>Klasyczne golenie twarzy lub głowy i czyste linie przy brodzie, z gorącym ręcznikiem.</p></article>
+        <article class="card"><h3>Siwizna pod kontrolą</h3><p>Tonowanie włosów i brody farbą American Crew. Subtelnie wyrównuje kolor, wygląda naturalnie.</p></article>
+        <article class="card"><h3>Po pracy i w sobotę</h3><p>Otwarte do 21:00 od poniedziałku do soboty, w sobotę już od 9:00. Strzygą Yevhen, Tatiana i Piotrek.</p></article>
       </div>
     </section>
 
-    <section id="proof" class="section">
-      <h2>What people say</h2>
-      <blockquote>“Replace with a real testimonial.” <cite>Name, Role</cite></blockquote>
+    <section id="opinie" class="section">
+      <h2>Opinie klientów</h2>
+      <div class="rating">
+        <p class="rating-score"><span aria-hidden="true">★★★★★</span> <strong>5.0</strong> / 5</p>
+        <p>Średnia ocena z <strong>244 opinii</strong> potwierdzonych klientów w Booksy (stan na 18 listopada 2026).</p>
+        <a href="{{BOOKING_URL}}" rel="noopener">Przeczytaj opinie w Booksy</a>
+      </div>
     </section>
 
     <!-- Every <summary> here must match a Question "name" in the FAQPage JSON-LD above (tools/check.mjs enforces it). -->
     <section id="faq" class="section">
-      <h2>Frequently asked questions</h2>
+      <h2>Najczęstsze pytania</h2>
       <details>
-        <summary>Question one?</summary>
-        <p>Answer one.</p>
+        <summary>Ile kosztuje strzyżenie męskie w BC Clippers?</summary>
+        <p>Strzyżenie męskie kosztuje 110 zł (ok. 1 godziny), a strzyżenie samą maszynką 90 zł (ok. 30 minut). W obu przypadkach mycie i stylizacja włosów są w cenie.</p>
+      </details>
+      <details>
+        <summary>Jak umówić się na wizytę?</summary>
+        <p>Wizyty rezerwujesz online w Booksy: wybierasz usługę, barbera (Yevhen, Tatiana lub Piotrek) i wolny termin.</p>
+      </details>
+      <details>
+        <summary>W jakich godzinach jest otwarte?</summary>
+        <p>Od poniedziałku do piątku w godzinach 10:00–21:00, w soboty 9:00–21:00. W niedziele barber shop jest zamknięty.</p>
+      </details>
+      <details>
+        <summary>Gdzie dokładnie jest BC Clippers?</summary>
+        <p>Przy ul. Rakowickiej 22D, 31-521 Kraków, w dzielnicy Śródmieście.</p>
+      </details>
+      <details>
+        <summary>Czy można ukryć siwe włosy na głowie lub w brodzie?</summary>
+        <p>Tak. Tonowanie głowy kosztuje 90 zł, tonowanie brody farbą American Crew 70 zł, a tonowanie z trymowaniem brody 140 zł. Efekt ma wyglądać naturalnie.</p>
+      </details>
+      <details>
+        <summary>Co obejmuje COMBO CLIPPERS?</summary>
+        <p>To strzyżenie włosów, broda oraz golenie z gorącym ręcznikiem, razem z myciem i stylizacją włosów. Trwa ok. 1,5 godziny i kosztuje 180 zł.</p>
       </details>
     </section>
 
-    <section id="contact" class="section">
-      <h2>{{CTA_LABEL}}</h2>
-      <form id="lead-form" action="{{FORM_ENDPOINT}}" method="post"
-            data-msg-sending="Sending…"
-            data-msg-success="Thanks! We will be in touch."
-            data-msg-error="Something went wrong. Please try again.">
-        <!-- Fields: remove name/message if the brief wants a one-field form. Sending is tested with node tools/form-test.mjs. -->
-        <label>Name <input type="text" name="name" autocomplete="name"></label>
-        <label>Email <input type="email" name="email" required autocomplete="email"></label>
-        <label class="full">Message <textarea name="message" rows="4"></textarea></label>
-        <input type="hidden" name="_subject" value="New enquiry from the {{BRAND}} website">
-        <input type="hidden" name="page" value="{{PAGE_URL}}">
-        <!-- @if TURNSTILE_SITE_KEY -->
-        <!-- Anti-bot check (Cloudflare Turnstile): loaded on first use of the form, usually invisible. -->
-        <div class="turnstile" data-turnstile="{{TURNSTILE_SITE_KEY}}"></div>
-        <!-- @endif -->
-        <!-- @if FORM_ACCESS_KEY -->
-        <input type="hidden" name="access_key" value="{{FORM_ACCESS_KEY}}">
-        <!-- @endif -->
-        <!-- honeypot: real visitors never see or fill this; bots do -->
-        <label class="hp" aria-hidden="true">Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-        <button class="btn" type="submit">{{CTA_LABEL}}</button>
-        <p class="form-note">We only use your email to reply. See the <a href="privacy.html">privacy policy</a>.</p>
-        <p id="form-status" role="status" aria-live="polite"></p>
-      </form>
+    <section id="kontakt" class="section">
+      <h2>Dojazd i godziny otwarcia</h2>
+      <div class="contact">
+        <div>
+          <h3>Adres</h3>
+          <address>BC.CLIPPERS Barbershop<br>ul. Rakowicka 22D<br>31-521 Kraków (Śródmieście)</address>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Rakowicka+22D%2C+31-521+Krak%C3%B3w" rel="noopener">Otwórz w Mapach Google</a></p>
+          <p class="social"><a href="https://www.instagram.com/BC.Clippers/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61588855171556" rel="noopener">Facebook</a></p>
+        </div>
+        <div>
+          <h3>Godziny</h3>
+          <table class="hours">
+            <caption class="visually-hidden">Godziny otwarcia</caption>
+            <tbody>
+              <tr><th scope="row">Poniedziałek–piątek</th><td>10:00–21:00</td></tr>
+              <tr><th scope="row">Sobota</th><td>9:00–21:00</td></tr>
+              <tr><th scope="row">Niedziela</th><td>zamknięte</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="cta-box center">
+        <p>Wolne terminy sprawdzisz i zarezerwujesz w Booksy, o każdej porze.</p>
+        <a class="btn" href="{{BOOKING_URL}}" rel="noopener">{{CTA_LABEL}} w Booksy</a>
+      </div>
     </section>
   </main>
 

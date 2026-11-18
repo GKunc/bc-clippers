@@ -1,8 +1,8 @@
   <footer class="site-footer">
     <p>
-      &copy; <span id="year">{{YEAR}}</span> {{BRAND}} · <a href="{{ROOT}}privacy.html">Privacy</a>
+      &copy; <span id="year">{{YEAR}}</span> {{BRAND}} · ul. Rakowicka 22D, Kraków · <a href="{{ROOT}}privacy.html">Polityka prywatności</a>
       <!-- @if ANALYTICS=ga4 -->
-      · <button type="button" class="linklike" data-consent-open>Cookie settings</button>
+      · <button type="button" class="linklike" data-consent-open>Ustawienia cookies</button>
       <!-- @endif -->
       <!-- @if HAS_POSTS -->
       · <a href="{{ROOT}}blog/">Blog</a> · <a href="{{ROOT}}blog/feed.xml">RSS</a>
@@ -11,11 +11,11 @@
   </footer>
   <!-- @if ANALYTICS=ga4 -->
   <!-- Cookie consent for Google Analytics (Consent Mode v2, nothing loads before "Accept"). Translate with the page. -->
-  <section id="consent" class="consent" aria-label="Cookie consent" data-ga="{{ANALYTICS_ID}}" hidden>
-    <p>We would like to use Google Analytics cookies to understand how visitors use this site. They are set only if you accept. <a href="{{ROOT}}privacy.html">Privacy policy</a></p>
+  <section id="consent" class="consent" aria-label="Zgoda na cookies" data-ga="{{ANALYTICS_ID}}" hidden>
+    <p>Chcielibyśmy używać plików cookies Google Analytics, by wiedzieć, jak odwiedzający korzystają ze strony. Ustawimy je tylko za Twoją zgodą. <a href="{{ROOT}}privacy.html">Polityka prywatności</a></p>
     <div class="consent-actions">
-      <button type="button" class="btn" data-consent="granted">Accept</button>
-      <button type="button" class="btn" data-consent="denied">Reject</button>
+      <button type="button" class="btn" data-consent="granted">Akceptuję</button>
+      <button type="button" class="btn" data-consent="denied">Odrzucam</button>
     </div>
   </section>
   <script src="{{ROOT}}js/consent.js" defer></script>

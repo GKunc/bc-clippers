@@ -6,8 +6,20 @@
 
 ## Pages
 
-- [Home]({{SITE_URL}}/): {{PAGE_TITLE}}
-- [Privacy policy]({{SITE_URL}}/privacy.html): how personal data is handled
+- [Strona główna]({{SITE_URL}}/): {{PAGE_TITLE}}
+- [Cennik]({{SITE_URL}}/#cennik): wszystkie usługi z cenami i czasem trwania
+- [Rezerwacja w Booksy]({{BOOKING_URL}}): wolne terminy i opinie klientów
+- [Polityka prywatności]({{SITE_URL}}/privacy.html): jak przetwarzane są dane osobowe
+
+## Najważniejsze fakty
+
+- Adres: ul. Rakowicka 22D, 31-521 Kraków (Śródmieście)
+- Godziny: pon–pt 10:00–21:00, sob 9:00–21:00, niedziela zamknięte
+- Ceny: strzyżenie męskie 110 zł, strzyżenie maszynką 90 zł, strzyżenie brody 80 zł, COMBO BASIC (włosy + broda) 150 zł, COMBO CLIPPERS (włosy + broda + gorący ręcznik) 180 zł, golenie brzytwą 120 zł, tonowanie brody 70 zł
+- Mycie i stylizacja włosów w cenie każdego strzyżenia
+- Barberzy: Yevhen, Tatiana, Piotrek
+- Ocena w Booksy: 5.0/5 z 244 opinii (18.11.2026)
+- Instagram: https://www.instagram.com/BC.Clippers/
 
 <!-- @if HAS_POSTS -->
 ## Blog
