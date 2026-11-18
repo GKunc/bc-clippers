@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+  <!-- 404.html is served at any missing path, so on this page {{ROOT}} is the absolute site URL. -->
+  <!-- @include head -->
+  <title>Page not found | {{BRAND}}</title>
+  <meta name="description" content="This page does not exist. Go back to the {{BRAND}} home page.">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- @include header -->
+  <main id="main" class="section hero">
+    <h1>Page not found</h1>
+    <p class="lead">The page you are looking for does not exist or has moved.</p>
+    <a class="btn" href="{{ROOT}}">Go to the home page</a>
+  </main>
+  <!-- @include footer -->
+</body>
+</html>
