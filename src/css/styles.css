@@ -47,7 +47,6 @@ img, svg, video { max-width:100%; height:auto; }
 h1, h2, h3, .brand, .facts strong, .prices dd, .rating-score { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; }
 .brand { display:inline-flex; align-items:center; gap:.6rem; font-size:1.5rem; line-height:1; text-decoration:none; color:#fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 2px 2px 0 #6b6b6b; }
-.brand-mark { display:inline-grid; place-items:center; width:2.2rem; height:2.2rem; border-radius:var(--radius); background:#fff; color:#0b0b0b; font-size:1rem; letter-spacing:.04em; text-shadow:none; box-shadow: 0 0 0 2px #0b0b0b, 0 0 0 3px var(--silver); }
 
 .hero { position:relative; overflow:hidden; padding-top: clamp(3.5rem, 10vw, 7rem); padding-bottom: clamp(3rem, 8vw, 5.5rem); text-align:center; }
 /* the two diagonal chrome strokes from the logo */
